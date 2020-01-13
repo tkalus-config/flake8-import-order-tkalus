@@ -6,7 +6,7 @@ from setuptools import setup
 __title__ = "flake8-import-order-tkalus"
 __author__ = "Turtle Kalus"
 __email__ = "turtle" "@" "kalus.us"
-__version__ = "1.0"
+__version__ = "1.1"
 __copyright__ = "Copyright (C) 2019 tkalus"
 __license__ = "MIT License"
 
@@ -24,7 +24,7 @@ setup(
     license=__license__,
     install_requires=install_requires,
     py_modules=["flake8_import_order_tkalus"],
-    python_requires=">=2.7, >=3.6",
+    python_requires=">=3.5",
     entry_points={
         "flake8_import_order.styles": ["tkalus = flake8_import_order_tkalus:Tkalus"]
     },
@@ -35,10 +35,8 @@ setup(
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License (Expat)",
         "Operating System :: OS Independent",
-        "Programming Language :: Python :: 2.7",
-        "Programming Language :: Python :: 3.6",
-        "Programming Language :: Python :: 3.7",
-        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
         "Programming Language :: Python :: Implementation :: CPython",
         "Topic :: Software Development :: Libraries :: Python Modules",
         "Topic :: Software Development :: Quality Assurance",

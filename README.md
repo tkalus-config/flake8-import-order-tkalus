@@ -11,15 +11,14 @@ Actively used.
 
 ### Requirements
 
- * python 2.7
- * python 3.3, 3.4, 3.5
+ * python 3.5+
  * flake8
- * flake8-import-order
+ * flake8-import-order 0.18+
 
 ### Installation
 
 ```
-pip install git+https://github.com/tkalus-config/flake8-import-order-tkalus@v1.0#egg=flake8-import-order-tkalus
+pip install git+https://github.com/tkalus-config/flake8-import-order-tkalus@v1.1#egg=flake8-import-order-tkalus
 ```
 
 ### Running
