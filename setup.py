@@ -6,7 +6,7 @@ from setuptools import setup
 __title__ = "flake8-import-order-tkalus"
 __author__ = "Turtle Kalus"
 __email__ = "turtle" "@" "kalus.us"
-__version__ = "1.1"
+__version__ = "2.0"
 __copyright__ = "Copyright (C) 2019 tkalus"
 __license__ = "MIT License"
 

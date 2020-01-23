@@ -1,25 +1,40 @@
-"""
-Custom flake8-import-order, derived from smarkets style.
-
-Key difference here is that third-party and application modules are combined.
-"""
+"""Custom flake8-import-order."""
 
 
 from flake8_import_order import ImportType
-from flake8_import_order.styles import Smarkets
+from flake8_import_order.styles import Style
 
 
-class Tkalus(Smarkets):
-    """
-    Custom import order.
+class Tkalus(Style):
+    """Custom import order... probably aligning with code [TKalus] works on the most."""
 
-    We use Smarkets as a base with the addition that third party and application
-    imports should be in the same section.
-    """
+    @staticmethod
+    def import_key(import_):
+        """
+        Set the full ordering.
+
+        import [module]
+        from [module] import [name]
+        from .. import Name, anothername
+        from . import Thirdname, secondname
+
+        Module order ignores case
+        Name order is lexigraphical (case sensitive)
+        Relative module levels are reversed; ".." (level 2) is before "." (level 1)
+        """
+        modules = [module.lower() for module in import_.modules]
+        level = import_.level
+        if import_.type in {ImportType.APPLICATION_RELATIVE}:
+            level *= -1
+        return (import_.type, import_.is_from, level, modules, import_.names)
 
     @staticmethod
     def same_section(previous, current):
-        """Make sure we're classing the types together."""
+        """
+        Ordering of sections, allowing for grouping
+
+        Make sure we're classing APPLICATION and THIRD_PARTY types _together_.
+        """
         same_type = current.type == previous.type
         both_first = {previous.type, current.type} <= {
             ImportType.APPLICATION,

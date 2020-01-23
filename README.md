@@ -1,7 +1,14 @@
 # flake8-import-order-tkalus
 
-Package used as plugin for flake8-import-order to enforce combining third-party
-and app imports.
+Package used as plugin for flake8-import-order
+
+Based on base-[Style] and departs from there by:
+ * Enforces combining third-party and app imports.
+ * Module order ignores case
+ * Name order is lexigraphical (case sensitive)
+ * Relative module levels are reversed; ".." (level 2) is before "." (level 1)
+
+See [demo_file](demo/complete_tkalus.py) for examples
 
 ## Status
 
@@ -18,7 +25,7 @@ Actively used.
 ### Installation
 
 ```
-pip install git+https://github.com/tkalus-config/flake8-import-order-tkalus@v1.1#egg=flake8-import-order-tkalus
+pip install git+https://github.com/tkalus-config/flake8-import-order-tkalus@v2.0#egg=flake8-import-order-tkalus
 ```
 
 ### Running
