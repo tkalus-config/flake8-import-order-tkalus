@@ -1,4 +1,9 @@
-# flake8-import-order-tkalus
+# PROJECT ARCHIVED.
+
+I've switched to use [`flake8-isort`](https://github.com/gforcada/flake8-isort) + [`flake-black`](https://github.com/peterjc/flake8-black) (`pip install flake8-black flake8-isort`) for my projects.  Leaving this available for those who find it useful or want inspiration for thier own [`flake8-import-order`](https://github.com/PyCQA/flake8-import-order) derivative.
+
+---
+## flake8-import-order-tkalus
 
 Package used as plugin for flake8-import-order
 

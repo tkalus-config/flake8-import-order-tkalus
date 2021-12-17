@@ -1,5 +1,9 @@
 # Changelog
 
+## Archived
+
+* Module EOL'd.
+
 ## Release v2.0
 
 * Major release - major changes
